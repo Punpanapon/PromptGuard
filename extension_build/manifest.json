@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PromptGuard Safe Send",
+  "version": "2.0",
+  "description": "100% reliable PII protection with Safe Send button",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
