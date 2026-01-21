@@ -86,4 +86,3 @@ Since this is a specialized enterprise tool, it is installed via **Developer Mod
 
 ---
 
-**Built for the Enterprise AI Hackathon 2024.**
