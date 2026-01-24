@@ -1,5 +1,112 @@
 /* PromptGuard Dual Mode - Encrypt + Safe Send */
 
+/* Floating Shield Icon */
+#pg-shield-icon {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0b0f14;
+  color: #00f3ff;
+  border: 1px solid rgba(0, 243, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+#pg-shield-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 243, 255, 0.25);
+}
+
+/* Settings Menu */
+#pg-settings-menu {
+  position: fixed;
+  right: 18px;
+  bottom: 84px;
+  width: 220px;
+  background: #0d1117;
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #e6edf3;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  display: none;
+}
+
+#pg-settings-menu.pg-open {
+  display: block;
+}
+
+.pg-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.pg-setting-label {
+  color: #9fb3c8;
+  font-weight: 600;
+}
+
+/* Toggle Switch */
+.pg-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.pg-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pg-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2a2f3a;
+  transition: 0.2s;
+  border-radius: 24px;
+}
+
+.pg-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #cdd9e5;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+
+.pg-switch input:checked + .pg-slider {
+  background-color: #00ff41;
+}
+
+.pg-switch input:checked + .pg-slider:before {
+  transform: translateX(20px);
+  background-color: #0b0f14;
+}
+
 /* Button Container */
 #pg-button-container {
   display: flex;

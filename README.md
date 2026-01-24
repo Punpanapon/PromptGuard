@@ -85,4 +85,3 @@ Since this is a specialized enterprise tool, it is installed via **Developer Mod
 * **Ephemeral:** Clearing your browser cache wipes the vault.
 
 ---
-
